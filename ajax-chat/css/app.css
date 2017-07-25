@@ -1,0 +1,63 @@
+/**
+ * Faisons du beau, faisons du gracieux. 
+ */
+
+/**
+ * Typographies Google Maggle !
+ */
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Ubuntu');
+
+h1 {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+body, input, button {
+  font-family: Ubuntu, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.messages {
+  background-color: steelblue;
+  border-radius: 5px;
+  padding: 1em;
+  height: 50vh;
+  overflow: auto;
+}
+
+.message {
+  color: white;
+  padding: 0.3em;
+}
+
+.date, .author {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-between;
+}
+
+input, button {
+  padding: 0.5em;
+}
+
+input {
+  margin-right: 10px;
+}
+
+#author {
+  width: 20%;
+}
+
+#content {
+  width: 60%;
+}
+
+button[type="submit"]{
+  width: 20%;
+}
