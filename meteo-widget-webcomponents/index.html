@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faites connaissance avec les WebComponents</title>
+</head>
+<body>
+    <h1>Créons un composant user-card !</h1>
+    <h2>Ce h2 n'est là que pour vous montrer le problème de CSS Bleeding et l'utilité du ShadowDOM</h2>
+    <!-- Le but, avoir une balise <user-card> qui ne nécessite aucun framework ni aucune librairie. Elle marche
+        par elle-même. Elle peut accepter les attributs suivants :
+        - first-name="..." => Représente le prénom de l'utilisateur
+        - last-name="..." => Représente le nom de l'utilisateur
+        - avatar-url="" => Représente la photo de l'utilisateur -->
+    
+    <user-card first-name="Lior" last-name="Chamla" avatar-url="https://avatars.io/twitter/LiiorC">
+        <a href="#" slot="links">Email</a>
+        <a href="#" slot="links">Voir le site</a>
+        <p slot="description">Lior est développeur et formateur depuis 2009, et c'est aussi un beau gosse !</p>
+    </user-card>
+
+    <meteo-widget dark units="metric" lang="fr" city="Toulouse"></meteo-widget>
+    <meteo-widget units="fahrenheit" lang="en" city="New York"></meteo-widget>
+    <meteo-widget dark city="Lyon"></meteo-widget>
+
+    <p>Evidemment cette balise n'existe pas en HTML ..</p>
+
+    <script src="user-card.component.js"></script>
+    <script src="meteo-widget.component.js"></script>
+    <script>
+        // Nous souhaitons intéragir avec le <user-card> :)
+        document.querySelector('user-card').addEventListener('image-click', (event) => {
+            console.log("L'image a été clickée", event);
+        })
+    </script>
+</body>
+</html>
